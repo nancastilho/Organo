@@ -6,6 +6,7 @@ import './Formulario.css'
 const Formulrio = () => {
 
     const times = [
+        '',
         'Spacestation Gaming',
         'G2 Esports',
         'Team BDS',
@@ -13,6 +14,18 @@ const Formulrio = () => {
         'FaZe Clan',
         'Version1',
         'Moist Esports',
+    ]
+
+    const ranks = [
+        '',
+        'Bronze',
+        'Prata',
+        'Ouro',
+        'Platina',
+        'Diamante',
+        'Campeão',
+        'Grande Campeão',
+        'Lenda Supersônica',
     ]
 
     const aoSalvar = (evento) => {
@@ -26,7 +39,7 @@ const Formulrio = () => {
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
                 <CampoTexto obrigatorio ={true} label="Nome" placeholder="Digite seu nome" />
-                <CampoTexto label="Cargo" placeholder="Digite seu cargo" />
+                <ListaSuspensa label="Rank" itens={ranks}/>
                 <CampoTexto label="Imagem" placeholder="Informe o endereço da imagem" />
                 <ListaSuspensa label="Time" itens={times}/>
                 <Botao>
