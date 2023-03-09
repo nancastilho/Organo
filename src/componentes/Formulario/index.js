@@ -4,18 +4,9 @@ import CampoTexto from '../CampoTexto';
 import ListaSuspensa from '../ListaSuspensa';
 import './Formulario.css'
 
-const Formulrio = () => {
+const Formulrio = (props) => {
 
-    const times = [
-        '',
-        'Spacestation Gaming',
-        'G2 Esports',
-        'Team BDS',
-        'FURIA Esports',
-        'FaZe Clan',
-        'Version1',
-        'Moist Esports',
-    ]
+   
 
     const ranks = [
         '',
@@ -36,7 +27,12 @@ const Formulrio = () => {
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        console.log('Form foi submetido', nome, rank, imagem, time)
+        props.aoColaboradorCadastrado({
+            nome,
+            rank,
+            imagem,
+            time,
+        })
     }
 
 
@@ -67,7 +63,7 @@ const Formulrio = () => {
                 <ListaSuspensa
                     obrigatorio={true}
                     label="Time"
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
