@@ -1,0 +1,23 @@
+.footer{
+    background-color:#6278F7;
+   
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+}
+
+.desenvolvido{
+    color: white;
+}
+
+.redes img{
+    padding: 20px;
+    width: 20px;
+}
+
+.imagemOrgano img{
+    height: 50px;
+}

@@ -9,7 +9,6 @@ const Formulrio = (props) => {
    
 
     const ranks = [
-        '',
         'Bronze',
         'Prata',
         'Ouro',
@@ -33,6 +32,10 @@ const Formulrio = (props) => {
             imagem,
             time,
         })
+        setNome('')
+        setRank('')
+        setImagem('')
+        setTime('')
     }
 
 
